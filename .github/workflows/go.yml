@@ -39,7 +39,7 @@ jobs:
 
     - name: Run
       run: |
-        printf \`\`\` >> $GITHUB_STEP_SUMMARY
-        go run ./01/A.go >> $GITHUB_STEP_SUMMARY 2>&1
-        printf \`\`\` >> $GITHUB_STEP_SUMMARY
+        echo \`\`\` >> $GITHUB_STEP_SUMMARY
+        go run ${{ matrix.target }} >> $GITHUB_STEP_SUMMARY 2>&1
+        echo \`\`\` >> $GITHUB_STEP_SUMMARY
 
